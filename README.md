@@ -36,11 +36,15 @@ $ mvn spring-boot:run
 ##### Frontend
 - para executar este projeto basta acessar o diretório raiz do projeto `credit-analysis-ui` e executar o comando abaixo e automaticamente será aberto a aplicação no navegador padrão do sistema.
 ```sh 
-$ npm install && npm run dev
+$ npm install && npm start
 ``` 
 
 ## Documentação
 - esta aplicação possui documentação da API Rest disponível através da ferramenta Swagger em /swagger-ui.html
+
+### Melhorias 
+- Criar uma tela para listar as análises já realizadas, pois os dados já são salvos no banco de dados.
+- Criar um dashboard com gráficos para visualizar dados de análises de cŕeditos aprovadas e reprovadas.
 
 ### Observações 
 > Devido ao curto prazo não foi criado um script para inicialização da aplicação utilizando docker.
@@ -51,7 +55,8 @@ $ npm install && npm run dev
    [Java]: <http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html>
    [Spring-boot]: <https://projects.spring.io/spring-boot/>
    [Rest]: <https://www.w3.org/2001/sw/wiki/REST>
-   [Swagger]: <https://swagger.io/>  
+   [Swagger]: <https://swagger.io/>
+   [SpringFox Swagger2]: <http://springfox.github.io/springfox/>
    [Bootstrap4]: <https://getbootstrap.com/docs/4.0/>
    [Spring-data-jpa]: <https://spring.io/projects/spring-data-jpa>
    [Restful]:<https://www.devmedia.com.br/introducao-a-web-services-restful/37387>
