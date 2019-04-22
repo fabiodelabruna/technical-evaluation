@@ -1,6 +1,6 @@
 
 # Avaliação técnica
-Aplicação com objetivo de realizar cadastro de propostas de crédito para um determinado cliente.
+  Aplicação com objetivo de realizar cadastro de propostas de crédito para um determinado cliente.
 
 ## Tecnologias utilizadas
   - Frontend: [AngularJS], [Html5], [Bootstrap4]
@@ -9,17 +9,17 @@ Aplicação com objetivo de realizar cadastro de propostas de crédito para um d
   - Documentação: [Swagger], [SpringFox-Swagger2]
 
 ## Arquitetura 
-- Foram desenvolvidos dois projetos. Um para o back-end e outro para o front-end.
+- foram desenvolvidos dois projetos. Um para o back-end e outro para o front-end.
 
 ### Backend
-- Solução desenvolvida em Java utilizando Spring-boot, Spring-data-jpa.
+- solução desenvolvida em Java utilizando Spring-boot, Spring-data-jpa.
  - API Restful disponível na porta 8080 contendo documentação swagger dos endpoints disponível em `http://localhost:8080/swagger-ui.html`.
 
 ### Frontend  
-- Solução desenvolvida em AngularJS, Gulp, Html5, e CSS3 utilizando Bootstrap4.
+- solução desenvolvida em AngularJS, Gulp, Html5, e CSS3 utilizando Bootstrap4.
 
 ### Banco de dados
-- Para avaliação foi utilizado o banco de dados em memória, H2, alguns dados iniciais são populados através de um script sql na pasta de resources.
+- para avaliação foi utilizado o banco de dados em memória, H2, alguns dados iniciais são populados através de um script sql na pasta de resources.
 
 ### Build
 
@@ -40,11 +40,12 @@ $ npm install && npm start
 ``` 
 
 ## Documentação
-- esta aplicação possui documentação da API Rest disponível através da ferramenta Swagger em /swagger-ui.html
+- esta aplicação possui documentação da API Rest, que é gerada automaticamento tela biblioteca springfox-swagger2 e está disponível em /swagger-ui.html
 
 ### Melhorias 
-- Criar uma tela para listar as análises já realizadas, pois os dados já são salvos no banco de dados.
-- Criar um dashboard com gráficos para visualizar dados de análises de cŕeditos aprovadas e reprovadas.
+- criar uma tela para listar as análises já realizadas, pois os dados já são salvos no banco de dados.
+- criar um dashboard com gráficos para visualizar dados de análises de cŕeditos aprovadas e reprovadas.
+- melhorar a configuração do SpringFox-Swagger2 para que a documentação gerada automaticamente fique melhor.
 
 ### Observações 
 > Devido ao curto prazo não foi criado um script para inicialização da aplicação utilizando docker.
