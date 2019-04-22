@@ -1,4 +1,65 @@
-# Avaliação Técnica
+
+# Avaliação técnica
+Aplicação com objetivo de realizar cadastro de propostas de crédito para um determinado cliente.
+
+## Tecnologias utilizadas
+  - Frontend: [AngularJS], [Html5], [Bootstrap4]
+  - Backend: [Java], [Spring-boot], [Spring-data-jpa]
+  - Integrações: [Rest], [Restful], [Hateoas]
+  - Documentação: [Swagger]
+
+## Arquitetura 
+- Foram desenvolvidos dois projetos. Um para o back-end e outro para o front-end.
+
+### Backend
+- Solução desenvolvida em Java utilizando Spring-boot, Spring-data-jpa.
+ - API Restful disponível na porta 8080 contendo documentação swagger dos endpoints disponível em `http://localhost:8080/swagger-ui.html`.
+
+### Frontend  
+- Solução desenvolvida em AngularJS, Gulp, Html5, e CSS3 utilizando Bootstrap4.
+
+### Banco de dados
+- Para avaliação foi utilizado o banco de dados em memória, H2, alguns dados iniciais são populados através de um script sql na pasta de resources.
+
+### Build
+
+##### Backend com Maven
+- para compilar este projeto basta acessar o diretório raiz do projeto `credit-analysis-api` e executar o comando 
+```sh 
+$ mvn clean package
+``` 
+- para executar a aplicação basta acessar o diretório raiz do projeto `credit-analysis-api` e executar o comando 
+```sh 
+$ mvn spring-boot:run
+``` 
+
+##### Frontend
+- para executar este projeto basta acessar o diretório raiz do projeto `credit-analysis-ui` e executar o comando abaixo e automaticamente será aberto a aplicação no navegador padrão do sistema.
+```sh 
+$ npm install && npm run dev
+``` 
+
+## Documentação
+- esta aplicação possui documentação da API Rest disponível através da ferramenta Swagger em /swagger-ui.html
+
+### Observações 
+> Devido ao curto prazo não foi criado um script para inicialização da aplicação utilizando docker.
+
+   [AngularJS]: <http://angularjs.org>	
+   [Html5]: <https://www.w3.org/TR/html5/>
+   [Bootstrap]: <http://getbootstrap.com/>
+   [Java]: <http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html>
+   [Spring-boot]: <https://projects.spring.io/spring-boot/>
+   [Rest]: <https://www.w3.org/2001/sw/wiki/REST>
+   [Swagger]: <https://swagger.io/>  
+   [Bootstrap4]: <https://getbootstrap.com/docs/4.0/>
+   [Spring-data-jpa]: <https://spring.io/projects/spring-data-jpa>
+   [Restful]:<https://www.devmedia.com.br/introducao-a-web-services-restful/37387>
+   [Hateoas]: <https://spring.io/understanding/HATEOAS>
+
+
+
+# Avaliação Técnica - ORIGINAL
 
 [![drawing](https://sitegabriela.conductor.com.br/App_Themes/8/Images/Logos/BannerSite.png)](http://www.calcard.com.br/)
 
@@ -96,5 +157,4 @@ Calcard Administradora de Cartões
    [Java]: <http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html>
    [Spring-boot]: <https://projects.spring.io/spring-boot/>
    [Rest]: <https://www.w3.org/2001/sw/wiki/REST>
-   [Swagger]: <https://swagger.io/>  
-   
+   [Swagger]: <https://swagger.io/>
