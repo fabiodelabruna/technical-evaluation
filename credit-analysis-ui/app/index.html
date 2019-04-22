@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="creditApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Análise de Crédito</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/assets/css/deps.min.css">
+  <!-- <link rel="stylesheet" href="/assets/css/app.min.css"> -->
+</head>
+
+<body class="skin-blue fixed sidebar-mini">
+  <div class="container" ng-controller="CreditAnalysisCtrl">
+    <nav class="p-5 navbar">
+      <img src="/assets/imgs/BannerSite.png" class="img-fluid mx-auto d-block">
+    </nav>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="name">Nome</label>
+          <input type="text" class="form-control" id="name" ng-model="client.name">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="cpf">CPF</label>
+          <input type="text" class="form-control" id="cpf" ng-model="client.cpf">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="age">Idade</label>
+          <input type="number" min="1" class="form-control" id="age" ng-model="client.age">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="genre">Sexo</label>
+          <select id="genre" class="form-control" ng-model="client.genre">
+            <option ng-repeat="genre in genres">{{genre}}</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="maritalStatus">Estado civil</label>
+          <select id="maritalStatus" class="form-control" ng-model="client.maritalStatus">
+            <option ng-repeat="status in maritalStatus">{{status}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="state">Estado</label>
+          <select id="state" class="form-control" ng-model="client.state.id">
+              <option ng-repeat="state in states" value="{{state.id}}">{{state.name}}</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="dependents">Dependentes</label>
+          <input type="number" min="0" class="form-control" id="dependents" ng-model="client.dependents">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="remuneration">Renda</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">R$</span>
+            </div>
+            <input type="text" class="form-control" id="remuneration" ng-model="client.remuneration" ui-money-mask>
+          </div>
+        </div>
+        <div class="form-group col-md-4">
+          <button type="button" ng-click="doAnalysis()" class="btn btn-primary btn-lg btn-block">Realizar
+            Análise</button>
+        </div>
+        <div class="form-group col-md-8">
+          <div ng-show="creditAnalysisResult.status" ng-class="{'alert alert-success': creditAnalysisResult.status === 'APROVADO', 'alert alert-danger': creditAnalysisResult.status === 'NEGADO'}" role="alert">
+              {{ creditAnalysisResult.status }} : {{ creditAnalysisResult.description }}
+          </div>
+        </div>
+      </div>
+  </div>
+  </form>
+  </div>
+  <script src="/assets/js/deps.min.js"></script>
+  <script src="/assets/js/app.min.js"></script>
+</body>
+
+</html>
