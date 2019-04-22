@@ -6,7 +6,7 @@ Aplicação com objetivo de realizar cadastro de propostas de crédito para um d
   - Frontend: [AngularJS], [Html5], [Bootstrap4]
   - Backend: [Java], [Spring-boot], [Spring-data-jpa]
   - Integrações: [Rest], [Restful], [Hateoas]
-  - Documentação: [Swagger]
+  - Documentação: [Swagger], [SpringFox-Swagger2]
 
 ## Arquitetura 
 - Foram desenvolvidos dois projetos. Um para o back-end e outro para o front-end.
@@ -56,7 +56,7 @@ $ npm install && npm start
    [Spring-boot]: <https://projects.spring.io/spring-boot/>
    [Rest]: <https://www.w3.org/2001/sw/wiki/REST>
    [Swagger]: <https://swagger.io/>
-   [SpringFox Swagger2]: <http://springfox.github.io/springfox/>
+   [SpringFox-Swagger2]: <http://springfox.github.io/springfox/>
    [Bootstrap4]: <https://getbootstrap.com/docs/4.0/>
    [Spring-data-jpa]: <https://spring.io/projects/spring-data-jpa>
    [Restful]:<https://www.devmedia.com.br/introducao-a-web-services-restful/37387>
